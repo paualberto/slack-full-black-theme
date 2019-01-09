@@ -1,16 +1,17 @@
-# Slack Black Theme
+# Slack Full Black Theme
 
-A darker, more contrasty, Slack theme.
+Fork of [Nockiro/slack-black-theme](https://github.com/Nockiro/slack-black-theme) with full black sidebar.  
+You can use the original CSS url if you want; all the changes are in the snippet below.
 
 # Preview
 
-![Screenshot](https://cloud.githubusercontent.com/assets/7691630/24120350/4cbb643e-0d82-11e7-8353-5d4eb65dfd6a.png)
+![Screenshot](https://i.postimg.cc/43PNJZP0/2019-01-09-17-15-09.png)
 
 # Installing into Slack
 
 Find your Slack's application directory.
 
-* Windows: `%homepath%\AppData\Local\slack\`
+* Windows: `%homepath%\AppData\Local\slack`
 * Mac: `/Applications/Slack.app/Contents/`
 * Linux: `/usr/lib/slack/` (Debian-based)
 
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
    let webviews = document.querySelectorAll(".TeamView webview");
 
    // Fetch our CSS in parallel ahead of time
-   const cssPath = 'https://raw.githubusercontent.com/Nockiro/slack-black-theme/master/custom.css';
+   const cssPath = 'https://raw.githubusercontent.com/paualberto/slack-full-black-theme/master/custom.css';
    let cssPromise = fetch(cssPath).then(response => response.text());
 
    let customCustomCSS = `
@@ -43,14 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
       --background-elevated: #222;
    } 
 
-   a[aria-label^="NAME_OF_CHANNEL_OR_DIRECT_CONVO_TO_STYLE"]
-   {
-        --background: #4d0000  !important;
-        --text-transform: uppercase  !important;
-        --letter-spacing: 2px !important;
-        --text-shadow: 1px 1px white;
-
-    }   `
+    `
 
    // Insert a style tag into the wrapper view
    cssPromise.then(css => {
@@ -87,55 +81,6 @@ so you don't necessarily need to create an entire fork to change some small styl
 That's it! Restart Slack and see how well it works.
 
 NB: You'll have to do this every time Slack updates.
-
-# Color Schemes
-
-Here's some example color variations you might like.
-
-## Default
-![Default](https://cloud.githubusercontent.com/assets/7691630/24120350/4cbb643e-0d82-11e7-8353-5d4eb65dfd6a.png)
-```
---primary: #09F;
---text: #CCC;
---background: #080808;
---background-elevated: #222;
-```
-
-## One Dark
-![One Dark](https://user-images.githubusercontent.com/806101/27455546-826b3d88-5752-11e7-8a6b-87285b90eb3e.png)
-```
---primary: #61AFEF;
---text: #ABB2BF;
---background: #282C34;
---background-elevated: #3B4048;
-```
-
-## Low Contrast
-![Low Contrast](https://cloud.githubusercontent.com/assets/7691630/24120352/4ccdedf2-0d82-11e7-8ff7-c88e48b8e917.png)
-```
---primary: #CCC;
---text: #999;
---background: #222;
---background-elevated: #444;
-```
-
-## Navy
-![Navy](https://cloud.githubusercontent.com/assets/7691630/24120353/4cd08c4c-0d82-11e7-851a-4c62340456ad.png)
-```
---primary: #FFF;
---text: #CCC;
---background: #225;
---background-elevated: #114;
-```
-
-## Hot Dog Stand
-![Hot Dog Stand](https://cloud.githubusercontent.com/assets/7691630/24120351/4cca6182-0d82-11e7-8de8-7ab99dcde042.png)
-```
---primary: #000;
---text: #FFF;
---background: #F00;
---background-elevated: #FF0;
-```
 
 ## Coloring people/channel/conversations
 
