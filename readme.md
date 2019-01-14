@@ -1,6 +1,6 @@
 # Slack Full Black Theme
 
-Fork of [Nockiro/slack-black-theme](https://github.com/Nockiro/slack-black-theme) with full black sidebar.  
+Fork of [Nockiro/slack-black-theme](https://github.com/Nockiro/slack-black-theme) with full black sidebar and fixed white text.  
 You can use the original CSS url if you want; all the changes are in the snippet below.
 
 # Preview
