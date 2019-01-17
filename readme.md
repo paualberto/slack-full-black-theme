@@ -14,7 +14,7 @@ Find your Slack's application directory.
 * Windows: `%homepath%\AppData\Local\slack`
 * Mac: `/Applications/Slack.app/Contents/`
 * Linux: `/usr/lib/slack/` (Debian-based)
-
+* Linux (Flatpak): `/var/lib/flatpak/app/com.slack.Slack/current/active/files/extra/lib/slack/resources/app.asar.unpacked/src/static/ssb-interop.js`
 
 Open up the most recent version (e.g. `app-2.5.1`) then open
 `resources\app.asar.unpacked\src\static\index.js`
@@ -40,8 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
       /* Modify these to change your theme colors: */
       --primary: #09F;
       --text: #CCC;
+      --text-bright: #FFF;
       --background: #080808;
-      --background-elevated: #222;
+      --background-elevated: #080808;
    } 
 
     `
